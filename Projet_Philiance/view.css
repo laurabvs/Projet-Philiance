@@ -17,36 +17,17 @@
 body {
     margin : 0;
 }
- 
-.taches_input {
-    width : 600px;
-    margin : 0 auto;
-    margin-top : 40px;
-    display : grid;
-    grid-template-columns:  8fr 2fr;
-}
- 
-#inserer {
-    border-radius: 10px;
-    height : 45px;
-    width: 475px;
-}
- 
-#envoyer {
-    background-color : yellow;
-    height : 45px;
-    border-radius: 10px;
+
+.menu-deroulant {
+  border-radius: 50PX; 
 }
  
  
 .categories{
     width : 600px;
-    border: 1px solid rgb(163, 80, 55);
     margin : 0 auto;
     margin-top : 30px;
-    border-collapse : collapse;
-    
-    
+    border-collapse : collapse;  
 }
  
 th {
@@ -60,13 +41,3 @@ td {
     padding : 10px;
 }
  
-.suppr {
-    color : red;
-    text-decoration : none;
- 
-}
- 
-.suppr:hover {
-    color : red;
-    text-decoration : none;
-}

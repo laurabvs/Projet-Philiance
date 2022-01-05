@@ -5,31 +5,20 @@
 include 'bdd.php';
 include 'category.php';
 
-
-if (isset($_POST['ajouter_categorie'])) { 
-    if (empty($_POST['ajouter_categorie'])) {  
-        $erreurs = 'Vous devez indiquer la categorie à ajouter';
-    } else {
-        $category = $_POST['ajouter_categorie'];
-       //$etat = 0
-      $sql= ("INSERT INTO `categories`(`nom`, `couleurs`) VALUES (:nom , :couleurs)");
-        //$lesDonnees->bindParam(':nom', $nom);
-      $nouvelleConnexion->exec($sql);
-
-      
-    }
-}
 ?>
+
 
 <div class="header">
     <p class="header_titre"> Modification des catégories</p>
 </div>
  
- 
-    <form class="categorie_input" method="post" action="index.php">
-        <input id="inserer" type="text" name="creer_categorie"/>
-        <button id="envoyer">Créer</button>
-    </form>
+<div class= "menu-deroulant">
+<FORM>
+<SELECT name="nom" size="1">
+<OPTION>Médico
+<OPTION>Social
+</SELECT>
+</div>
 
 <table class="categories">
     <tr>
@@ -47,29 +36,22 @@ if (isset($_POST['ajouter_categorie'])) {
     </tr>
 
 
-<?php
 
+    <?php
+    $reponse = $nouvelleConnexion->query('SELECT * FROM `medical`');
+while ($medical = $reponse->fetch()) { 
+        ?>
+        <tr>
+            <td><?php echo $medical['chapitres'] ?></td>
+            <?php include 'upcategory.php'; ?>
+           
+        </tr>
 
-// if (isset($_POST['ajouter_category'])) { 
-//     if (empty($_POST['ajouter_category'])) {  
-//         $erreurs = 'Vous devez indiquer la categorie à ajouter';
-//     } else {
-//         $category = $_POST['ajouter_category'];
-//        //$etat = 0
-//       $sql= 'INSERT INTO `category`(`id`, `Nom`, `Couleurs`) VALUES ()';
-//         //$lesDonnees->bindParam(':nom', $nom);
-//       $nouvelleConnexion->exec($sql);
-
-      
-//     }
-// }
-
-//  if($category['category'] == 0 ){
-//     echo 'Secteur Medico';
-
-
-// }else {
-//     echo 'Secteur Social';
-// } 
-
-?>
+    <?php
+    }
+ 
+ 
+    ?>
+ 
+ 
+</table>
