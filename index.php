@@ -1,71 +1,39 @@
-<link rel="stylesheet" href="view.css" />
+<html>
+    <head>
+        <link rel="stylesheet" href="view.css" />
+    </head>
 
-<?php
-
-include 'bdd.php';
-include 'category.php';
-
-?>
-
-
-<div class="header">
-    <p class="header_titre"> Modification des catégories</p>
-</div>
- 
-<div class= "menu-deroulant">
+<body>
 
     <?php
-    $medico=1;
-    $social=2;
+
+    include 'bdd.php';
+    include 'category.php';
+
     ?>
 
-<FORM>
-<SELECT name="nom" size="1">
-<OPTION>Medico
-<OPTION>Social
-</SELECT>
-</div>
 
-<table class="categories">
-    <tr>
-        <th>
-            Chapitres
-        </th>
-        <th>
-            Modifier
-        <th>
-            Archiver
-        </th>
-        <th>
-            Publier
-        </th>
-    </tr>
+    <div class="header">
+        <p class="header_titre"> Modification des catégories</p>
+    </div>
+    
+    <div class= "menu-deroulant">
 
-
-<?php
-    if ($medico = 1)
-?>
-
-
-    <?php
-    $reponse = $nouvelleConnexion->query('SELECT * FROM `medical`');
-while ($medical = $reponse->fetch()) { 
+        <?php
+        $medico=1;
+        $social=2;
         ?>
-        <tr>
-            <td><?php echo $medical['chapitres'] ?></td>
-            <?php include 'upcategory.php'; ?>
-           
-        </tr>
 
-        <!-- <td><a class="suppr" href="index.php?del_id=<?php echo $tache['id'] ?>"> X</a></td>
-            -->
-        <td><a class="update" href="index.php?upcategory=<?php echo $medical['chapitres'] ?>">V</a></td>
+    <form method='GET' action=''>
+        <select name="nom" size="1">
+            <option value='medical'>Medico
+            <option value='social'>Social
+        </select>
+        <button> Change </button>
+    </form>
 
-    <?php
-    }
- 
- 
-    ?>
- 
- 
-</table>
+    </div>
+
+    <?php include 'vueCategorie.php'; ?>
+</body>
+</html>
