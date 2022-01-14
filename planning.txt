@@ -1,5 +1,0 @@
-// Planning - 05/01/2022 //
-
-- Relié a la base de données
-- affichage des "chapitres" de la classe Medico (bouton Medical selctionné)
-- affichage des "chapitres" de la classe Social ( bouton social selectionné)

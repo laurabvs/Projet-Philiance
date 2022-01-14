@@ -32,11 +32,11 @@
             ?>
 
             <td><a class="update" href="index.php?upcategory=<?php echo $medical['chapitres'] ?>"><script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<lottie-player src="https://assets10.lottiefiles.com/packages/lf20_dfulynng.json"  background="transparent"  speed="1"  style="width: 75px; height: 75px;"    ></lottie-player></a></td>
+<lottie-player src="https://assets10.lottiefiles.com/packages/lf20_dfulynng.json"  background="transparent"  speed="1"  style="width: 60px; height: 60px;"    ></lottie-player></a></td>
             <td><a class="suppr" href="index.php?deletecategory=<?php echo $medical['chapitres'] ?>"> <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<lottie-player src="https://assets2.lottiefiles.com/private_files/lf30_a5ghwfwe.json"  background="transparent"  speed="1"  style="width: 75px; height: 75px;"     ></lottie-player></a></td>
+<lottie-player src="https://assets2.lottiefiles.com/private_files/lf30_a5ghwfwe.json"  background="transparent"  speed="1"  style="width: 60px; height: 60px;"     ></lottie-player></a></td>
             <td><a class="update" href="index.php?publierCategorie=<button onclick="myFunction()><a class="update" href="index.php?publierCategorie="script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<lottie-player src="https://assets6.lottiefiles.com/packages/lf20_r4alsuls.json"  background="transparent"  speed="1"  style="width: 85px; height: 85px;" ></lottie-player></a></td>
+<lottie-player src="https://assets6.lottiefiles.com/packages/lf20_r4alsuls.json"  background="transparent"  speed="1"  style="width: 75px; height: 75px;" ></lottie-player></a></td>
            
         </tr>
         
